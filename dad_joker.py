@@ -13,8 +13,8 @@ def slow_text(slow_text):
 
 url =  'https://icanhazdadjoke.com/search'
 
-yesy = "yes" or "y"
-noy = "no" or 'n'
+yesy = ["yes", "y"]
+noy = ["no", "n"]
 
 title = pyfiglet.figlet_format("DAD JOKE MACHINE!")
 print(title)
@@ -24,10 +24,10 @@ slow_text("and I'll give you a silly joke!")
 
 def retry():
   slow_text('You do want to try again? Enter [Y]/[N]')
-  again = input().lower()
-  if again == yesy:
+  again = input()
+  if again.lower() in yesy:
     dad_joker()
-elif again == noy:
+  elif again in noy:
     slow_text('Cya!')
   else:
     slow_text('Wrong input!')
@@ -50,15 +50,15 @@ def dad_joker():
     if joke2 == yesy:
       slow_text(f"on '{user_input}' again? Enter [Y]/[N]")
       cont = input().lower()
-      if cont == yesy:
+      if cont in yesy:
         slow_text(results[random.randrange(0,total_jokes)]['joke'])
         rejoke()
-    elif cont == noy:
+      elif cont in noy:
         dad_joker()
       else:
         slow_text("Wrong input!")
         rejoke()
-    elif joke2 == noy:
+    elif joke2 in noy:
       slow_text('Cya!')
     else:
       slow_text('Wrong input!')
