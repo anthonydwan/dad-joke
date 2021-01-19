@@ -1,7 +1,7 @@
-# dad-joke
+# dad-joke (Personal Mini Project on Practising API Usage) 
 This is a project to practice basic API usage. It is based on the API project from Colt Steele's Udemy course - Python 3 Modern Bootcamp.
 
-While the core idea is based off the project in the course, I have tried to refine it to make it a better experience for the user.
+I have tried to refine it to make it a better experience for the user.
 
 For example, I've:
 1. added timing for text display; and
